@@ -55,31 +55,35 @@ Tổng quan đến chi tiết
     background-color: #ccc;
 }
 
-#nav > li:hover .subnav{
+#nav  li:hover .subnav{
     display: block;
 }
 
 
 #nav .subnav {
     display: none;
+    min-width: 160px;
     position: absolute;
     top: 100%;
-    /* left: 50%; */
     background-color: #fff;
+    box-shadow: 0 1px 3px  rgba(0, 0, 0, 0.2) ;
 }
+
+
 #nav .subnav li {
     list-style-type: none;
 }
 #nav .subnav a {
     color: #000;
-
+    padding: 0 28px;
+    line-height: 38px;
 }
 
 /* SLIDER */
 
 #slider {
     min-height: 500px;
-    background-color: #333;
+    /* background-color: #333; */
 }
 #content {
 
