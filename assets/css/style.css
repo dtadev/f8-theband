@@ -262,6 +262,7 @@ Tổng quan đến chi tiết
     padding: 10px 16px;
     display: inline-block;
     margin-top: 15px;
+    border: none;
 }
 
 .place-buy-btn:hover {
@@ -300,6 +301,7 @@ Tổng quan đến chi tiết
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease 0.35s;
 }
 
 
@@ -371,4 +373,16 @@ Tổng quan đến chi tiết
 
 .modal-help a {
     color: #2196f3;
+}
+
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
