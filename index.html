@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./assets/img/favi-icon.jpg" type="image/x-icon">
     <title>F8 The Band</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -35,7 +36,12 @@
             <div class="search-btn">
                 <i class="ti-search"></i>
             </div>
-            <!-- end search button  -->
+
+            <!-- begin mobile menu button  -->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+            
 
 
         </div> 
@@ -261,6 +267,30 @@
             e.stopPropagation()
         })
 
+
+        //event onclick trên menu icon để đóng mở menu trên mobile
+        var headerEle = document.getElementById('header')
+        var mobileMenu = document.getElementById('mobile-menu')
+        var headerHeight = headerEle.clientHeight;
+        mobileMenu.onclick = function() {
+            var isClosed = headerEle.clientHeight === headerHeight;
+            if(isClosed) {
+                headerEle.style.height = 'auto';
+            } else {
+                headerEle.style.height = '46px';
+            }
+        }
+
+        //tự động đóng menu - khi click vào item tronf menu
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function () {
+                headerEle.style.height = null;
+            }
+        }
 
     </script>
 </body>

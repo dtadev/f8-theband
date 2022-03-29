@@ -83,7 +83,7 @@ Tổng quan đến chi tiết
 
 /* Main  */
 #main{
-
+    
 }
 
 /* HEADER */
@@ -96,6 +96,7 @@ Tổng quan đến chi tiết
     right: 0;
     /* width: 100%; */
     z-index: 1;
+    overflow: hidden;
 }
 
 #nav {
@@ -154,7 +155,7 @@ Tổng quan đến chi tiết
     font-size: 12px;
 }
 
-
+#header .mobile-menu-btn,
 #header .search-btn {
     color: #fff;
     /* display: inline-block; */
@@ -164,10 +165,25 @@ Tổng quan đến chi tiết
     padding: 0 22px;
 }
 
+
+
+
 #header .search-btn:hover {
     background-color: #f44336;
     cursor: pointer;
 }
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 
 /* SLIDER */
 
@@ -203,9 +219,13 @@ Tổng quan đến chi tiết
 
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+
+    padding-left: 16px;
+    padding-right: 16px; /*fix width khi bị hở hoặc dùng*/ /* overflow: hidden; */
 
 }
 #content .section-heading{
