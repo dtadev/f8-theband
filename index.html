@@ -269,11 +269,11 @@
 
 
         //event onclick trên menu icon để đóng mở menu trên mobile
-        var headerEle = document.getElementById('header')
-        var mobileMenu = document.getElementById('mobile-menu')
-        var headerHeight = headerEle.clientHeight;
+        let headerEle = document.getElementById('header')
+        let mobileMenu = document.getElementById('mobile-menu')
+        let headerHeight = headerEle.clientHeight;
         mobileMenu.onclick = function() {
-            var isClosed = headerEle.clientHeight === headerHeight;
+            let isClosed = headerEle.clientHeight === headerHeight;
             if(isClosed) {
                 headerEle.style.height = 'auto';
             } else {
@@ -281,14 +281,21 @@
             }
         }
 
-        //tự động đóng menu - khi click vào item tronf menu
+        //tự động đóng menu - khi click vào item trong menu
 
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-        for (var i = 0; i < menuItems.length; i++){
-            var menuItem = menuItems[i];
+        let menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (let i = 0; i < menuItems.length; i++){
+            let menuItem = menuItems[i];
             
-            menuItem.onclick = function () {
-                headerEle.style.height = null;
+            
+            
+            menuItem.onclick = function(e) {
+                let isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    e.preventDefault();
+                } else {
+                    headerEle.style.height = null;
+                }
             }
         }
 
