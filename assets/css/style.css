@@ -87,9 +87,6 @@ Tổng quan đến chi tiết
 }
 
 /* Main  */
-#main{
-    
-}
 
 /* HEADER */
 #header{
@@ -223,9 +220,6 @@ Tổng quan đến chi tiết
 }
 
 /* content */
-#content {
-
-}
 
 #content .content-section{
     width: 800px;
@@ -357,6 +351,14 @@ Tổng quan đến chi tiết
     line-height: 1.4;
 }
 
+.contact-infor a{
+    color: #101aef;
+    opacity: 0.7;
+}
+
+.contact-infor a:hover {
+    opacity: 1;
+}
 /* .contact-infor i[class*="ti-"] css selector nâng cao */
 .contact-infor-icon{
     width: 30px;

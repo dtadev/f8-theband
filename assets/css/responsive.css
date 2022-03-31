@@ -17,6 +17,33 @@
     }
 }
 
+/* Mobile & Tablet */
+
+@media (max-width: 1023px) {
+    .btn {
+        padding: 15px 16px;
+    }
+    .contact-form .form-control {
+        padding: 15px;
+    }
+
+    .socials-list {
+        font-size: 48px;
+    }
+
+    .socials-list a {
+        margin: 0 8px;
+    }
+
+    .copy-right a{
+        padding: 4px 0;
+        display: inline-block;
+    }
+    .contact-infor {
+        line-height: 2;
+    }
+}
+
 /* MOBILE  */
 @media (max-width: 739px) {
 
@@ -66,6 +93,6 @@
     }
 
     .contact-form{ 
-        margin-top: 16px;
+        margin-top: 32px;
     }
 }
