@@ -65,6 +65,10 @@ Tổng quan đến chi tiết
     margin-top: 16px !important;
 }
 
+.mt-32 {
+    margin-top: 32px;
+}
+
 .btn{
     background-color: #000;
     color: #fff;
@@ -73,6 +77,7 @@ Tổng quan đến chi tiết
     display: inline-block;
     margin-top: 15px;
     border: none;
+    text-align: center;
 }
 
 .btn:hover {
@@ -257,7 +262,7 @@ Tổng quan đến chi tiết
 }
 
 #content .members-list{
-    padding-top: 48px;
+    padding-top: 32px;
 }
 #content .member-item{
     text-align: center;
@@ -313,7 +318,7 @@ Tổng quan đến chi tiết
 /* Place  */
 
 .places-list{
-   margin-top: 32px;
+   margin-top: 16px;
 }
 
 .place-img{

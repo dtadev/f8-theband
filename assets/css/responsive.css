@@ -19,6 +19,17 @@
 
 /* MOBILE  */
 @media (max-width: 739px) {
+
+    .s-col-full,
+    .s-full-width{
+        width: 100% !important;
+    }
+
+ 
+
+    .s-mt-8 {
+        margin-top: 8px !important; 
+    }
     #nav {
         display: block;
     }
@@ -32,7 +43,7 @@
         background-color: #333;
     }
 
-    /*line-height khoảng 1.4 vs 1.6 for vietnam - ngón tay user khoảng min: 41px*/
+    /*line-height khoảng 1.4 foreign vs 1.6 vietnam - ngón tay user khoảng min: 41px*/
 
     #nav .subnav a {
         color: #fff;
@@ -50,5 +61,11 @@
         display: none;
     }
 
+    #content .member-img{
+        width: 60%;
+    }
 
+    .contact-form{ 
+        margin-top: 16px;
+    }
 }
